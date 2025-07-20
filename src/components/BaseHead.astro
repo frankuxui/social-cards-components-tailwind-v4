@@ -1,0 +1,119 @@
+---
+import { siteConfig } from "@/config";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const pathname = Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
+const canonicalURL = new URL(pathname, Astro.site).toString();
+const { title = siteConfig.title, description = siteConfig.description } = Astro.props as Props;
+const ogImage = new URL(siteConfig.ogImage, Astro.site?.href).toString();
+const logo = new URL(siteConfig.logo, Astro.site).toString();
+
+const JsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  dateCreated: "2024-12-23T12:34:00-05:00",
+  dateModified: "2024-12-26T14:53:00-05:00",
+  mainEntity: {
+    "@type": "Person",
+    name: siteConfig.author.name,
+    alternateName: siteConfig.author.alternateName,
+    identifier: siteConfig.author.alternateName,
+    description: siteConfig.description,
+    image: new URL(siteConfig.ogImage, Astro.site).toString(),
+    sameAs: [
+      siteConfig.social.github,
+      siteConfig.social.linkedin,
+      siteConfig.social.figma,
+      siteConfig.social.codepen,
+      siteConfig.social.codesandbox,
+      siteConfig.social.devto,
+      siteConfig.social.instagram,
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.author.alternateName,
+      logo: {
+        "@type": "ImageObject",
+        url: new URL(siteConfig.logo, Astro.site).toString(),
+      },
+    },
+  },
+};
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
+<link rel="sitemap" href={new URL("sitemap-index.xml", Astro.site)} />
+<link rel="alternate" type="application/rss+xml" title={siteConfig.title} href={new URL("rss.xml", Astro.site)} />
+<meta name="generator" content={Astro.generator} />
+
+<!-- SEO Metadata -->
+<meta name="keywords" content={siteConfig.keywords.join(", ")} />
+<meta name="author" content="Frankuxui" />
+<meta name="application-name" content={siteConfig.title} />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Og / default -->
+<meta property="og:logo" content={logo} />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:site_name" content={siteConfig.title} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:alt" content={title} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain" content="widgets-components-tailwind-v4.vercel.app" />
+<meta name="twitter:site" content="@frankuxui" />
+<meta name="twitter:creator" content="@frankuxui" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImage} />
+
+<!-- HTML Meta Tags -->
+<title>Widgets y Componentes UI con Tailwind CSS 4</title>
+<meta
+  name="description"
+  content="Explora una colección de widgets, componentes y diseños minimalistas creados con Tailwind CSS 4 y Astro. Recursos modernos y personalizables para proyectos de finanzas, redes sociales, deportes, viajes y más."
+/>
+
+<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+{JsonLd && <script type="application/ld+json" is:inline set:html={JSON.stringify(JsonLd)} />}

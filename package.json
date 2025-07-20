@@ -1,0 +1,21 @@
+{
+  "name": "social-cards-components-tailwind-v4",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host --port 4327",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/vercel": "^8.2.2",
+    "@tailwindcss/vite": "^4.1.10",
+    "astro": "^5.12.0",
+    "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
+  }
+}

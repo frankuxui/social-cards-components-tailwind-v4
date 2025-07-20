@@ -1,0 +1,71 @@
+---
+
+---
+
+<button data-toggle="theme" class="w-10 h-10 inline-flex items-center justify-center">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+      d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+    >
+    </path><path d="M12 3l0 18"></path><path d="M12 9l4.65 -4.65"></path><path
+      d="M12 14.3l7.37 -7.37"
+    >
+    </path><path d="M12 19.6l8.85 -8.85"></path>
+  </svg>
+</button>
+<script>
+  const themeToggle = document.querySelectorAll('[data-toggle="theme"]');
+
+  // Theme
+
+  const applyTheme = (theme: string) => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+    } else {
+      document.documentElement.classList.add("light");
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  // Leer tema guardado o sistema
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    // Detectar preferencia del sistema
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      applyTheme("dark");
+    } else {
+      applyTheme("light");
+    }
+  }
+
+  // Toggle del tema al hacer click
+  themeToggle.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.classList.contains("dark") ? "dark" : "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      applyTheme(newTheme);
+      localStorage.setItem("theme", newTheme);
+    });
+  });
+
+  // Escuchar cambios en preferencia del sistema
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+  });
+</script>

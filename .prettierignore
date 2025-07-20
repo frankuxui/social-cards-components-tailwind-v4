@@ -1,0 +1,9 @@
+# Ignorar la carpeta node_modules
+node_modules/
+
+# Ignorar otros archivos y carpetas si es necesario
+dist/
+build/
+output/
+*.min.js
+*.bundle.js
