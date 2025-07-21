@@ -15,7 +15,7 @@
   "singleQuote": false,
   "quoteProps": "as-needed",
   "jsxSingleQuote": false,
-  "printWidth": 100,
+  "printWidth": 200,
   "tabWidth": 2,
   "bracketSpacing": true,
   "htmlWhitespaceSensitivity": "ignore"
