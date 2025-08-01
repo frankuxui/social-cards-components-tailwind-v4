@@ -202,7 +202,7 @@ import Expo from "@/layouts/Expo.astro";
         <p class="text-foreground/70">Project Manager</p>
       </div>
     </header>
-    <section>
+    <section class="w-full">
       <div class="w-full">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 370 141" fill="none">
           <path
@@ -1386,6 +1386,31 @@ import Expo from "@/layouts/Expo.astro";
               </button>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <article class="border flex flex-col items-start break-inside relative rounded-2xl overflow-hidden gap-4 mb-3 text-xs bg-background border-border text-foreground">
+    <section class="w-full flex flex-col gap-4">
+      <div class="relative w-full">
+        <img
+          src="https://images.unsplash.com/photo-1419640303358-44f0d27f48e7?w=800&h=600"
+          alt="Imagen de pexels de Jez Timms"
+          data-author="https://unsplash.com/es/@jeztimms"
+          title="Imagen de pexels de Jez Timms"
+          class="w-full h-full object-cover min-h-64"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="absolute left-0 w-full bottom-0 px-4 pb-4 pt-10 gap-6 flex items-center justify-between bg-gradient-to-t from-black to-transparent text-white">
+          <h2 class="text-xl font-medium">Web Design templates Selection</h2>
+          <img
+            class="flex-none w-10 h-10 rounded-full border-2 border-white/60"
+            src="https://images.unsplash.com/photo-1542534759-05f6c34a9e63?w=300&h=300&fit=crop"
+            alt="Imagen de Unsplash por febri sym"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
