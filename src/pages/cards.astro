@@ -1205,6 +1205,149 @@ import Expo from "@/layouts/Expo.astro";
     </section>
   </article>
 
+  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden mb-3 text-xs border-border">
+    <div class="absolute top-0 left-0 w-full flex items-center justify-between z-1 p-6">
+      <button class="w-8 h-8 rounded-full inline-flex items-center justify-center bg-white text-black backdrop-blur-lg" aria-label="Back to home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5" d="m10 16l-4-4m0 0l4-4m-4 4h12"></path>
+        </svg>
+      </button>
+      <button aria-label="Menu" class="w-8 h-8 rounded-full inline-flex items-center justify-center bg-white text-black backdrop-blur-lg">
+        <svg data-icon="menu-carbon" class="rotate-90" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="3.75" d="M12 12h.01v.01H12zm0-7h.01v.01H12zm0 14h.01v.01H12z"></path>
+        </svg>
+      </button>
+    </div>
+    <img
+      src="https://images.unsplash.com/photo-1579618218290-24a26f63a738?w=600&h=800"
+      alt="Imagen de pexels de Museums Victoria"
+      data-author="https://unsplash.com/es/@jeztimms"
+      class="w-full h-full object-cover min-h-64"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="z-1 -mt-20 w-full py-6 relative rounded-t-2xl bg-background">
+      <div class="absolute left-1/2 top-4 -translate-x-1/2 w-10 h-1 rounded cursor-ns-resize bg-foreground/10"></div>
+      <header class="w-full flex items-center justify-between gap-4 p-4">
+        <div class="flex flex-col items-start">
+          <h2 class="text-base font-semibold">Cameron Ramirez</h2>
+          <p>Tarragona, España</p>
+        </div>
+        <button class="inline-flex text-sm items-center justify-center px-4 h-8 font-medium rounded-full bg-indigo-700 text-white hover:bg-indigo-800 transition-all duration-300 focus:bg-indigo-800">
+          Profile
+        </button>
+      </header>
+      <section class="w-full px-4">
+        <div class="flex items-center justify-start gap-4">
+          <div class="flex-none">
+            <dt class="sr-only">Users</dt>
+            <dd class="flex justify-start -space-x-1.5">
+              <a href="#" class="inline-block">
+                <img class="w-7 h-7 rounded-full ring-2 ring-background" src="https://randomuser.me/api/portraits/women/46.jpg" alt="avatar" loading="lazy" />
+              </a>
+              <a href="#" class="inline-block">
+                <img class="w-7 h-7 rounded-full ring-2 ring-background" src="https://randomuser.me/api/portraits/men/45.jpg" alt="avatar" loading="lazy" />
+              </a>
+              <a href="#" class="inline-block">
+                <img class="w-7 h-7 rounded-full ring-2 ring-background" src="https://randomuser.me/api/portraits/women/47.jpg" alt="avatar" loading="lazy" />
+              </a>
+            </dd>
+          </div>
+          <p class="w-full">3 users have reacted to this post, <a href="#" class="font-medium">John Doe</a> and <a href="#" class="font-medium">Jane Smith</a>.</p>
+        </div>
+      </section>
+      <section class="w-full pt-4">
+        <ul class="w-full flex items-center justify-between px-6 gap-4 border-b border-border">
+          <li>
+            <a href="#" class="inline-flex items-center justify-center text-sm -mb-0.5 font-medium py-2 border-b-3 border-indigo-600">Home</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center justify-center text-sm -mb-0.5 font-medium py-2">About</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center justify-center text-sm -mb-0.5 font-medium py-2">Media</a>
+          </li>
+          <li>
+            <a href="#" class="inline-flex items-center justify-center text-sm -mb-0.5 font-medium py-2">Design</a>
+          </li>
+        </ul>
+      </section>
+      <section class="w-full pt-4 grid gap-3">
+        <div class="w-full flex items-center justify-between gap-4 px-4">
+          <div class="flex items-center gap-3">
+            <span class="flex-none w-12 h-12 rounded-2xl bg-cyan-500/20" role="img"></span>
+            <div class="grid">
+              <h5 class="truncate text-sm font-medium">fashion week</h5>
+              <p class="text-xs text-foreground/50">Central Park</p>
+            </div>
+          </div>
+          <button class="inline-flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 hover:bg-foreground/10 focus:ring-2 focus:ring-foreground">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none" data-icon="like-outline">
+              <path
+                d="M9.43262 2.28784C10.354 0.890298 12.1751 0.511005 13.6816 0.993896V0.994873C16.4642 1.89075 17.6067 5.27795 16.6816 8.1687L16.6807 8.17163C15.9621 10.4563 14.3364 12.2243 12.6729 13.4304C11.8445 14.031 11.0212 14.4819 10.3232 14.78C9.60129 15.0884 9.0834 15.2039 8.84863 15.2039C8.61199 15.2039 8.0956 15.0902 7.37891 14.7869C6.68537 14.4933 5.86687 14.0485 5.04199 13.4519C3.48985 12.3292 1.96075 10.7047 1.16211 8.59644L1.0127 8.16772C0.115736 5.36626 1.15453 2.10104 3.75 1.08569L4.00586 0.994873C5.48476 0.517629 7.27795 0.928 8.28223 2.31323C8.41712 2.49924 8.63454 2.6074 8.86426 2.60229C9.09389 2.59716 9.30612 2.47954 9.43262 2.28784Z"
+                stroke="#130F26"
+                stroke-width="1.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+              </path>
+              <path d="M12.3298 3.83484C13.4539 3.95033 14.1571 4.84164 14.1152 6.09059" stroke="#130F26" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="w-full flex items-center justify-between gap-4 px-4">
+          <div class="flex items-center gap-3">
+            <span class="flex-none w-12 h-12 rounded-2xl bg-rose-500/20" role="img"></span>
+            <div class="grid">
+              <h5 class="truncate text-sm font-medium">fashion week</h5>
+              <p class="text-xs text-foreground/50">Central Park</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center justify-center gap-1">
+            <span class="px-2 h-5 leading-2 font-medium text-[10px] rounded inline-flex items-center justify-center text-black bg-cyan-300">NEW</span>
+          </div>
+        </div>
+        <div class="w-full relative bg-rose-700">
+          <button class="w-10 h-10 absolute right-2 top-1/2 -translate-y-1/2 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4.687 6.213L6.8 18.976a2.5 2.5 0 0 0 2.466 2.092h3.348m6.698-14.855L17.2 18.976a2.5 2.5 0 0 1-2.466 2.092h-3.348m-1.364-9.952v5.049m3.956-5.049v5.049M2.75 6.213h18.5m-6.473 0v-1.78a1.5 1.5 0 0 0-1.5-1.5h-2.554a1.5 1.5 0 0 0-1.5 1.5v1.78z"
+              >
+              </path>
+            </svg>
+          </button>
+          <div class="w-full flex items-center justify-between gap-4 px-4 shadow-xs drop-shadow-sm rounded-lg p-2 relative -left-10 max-w-64 border border-border bg-background">
+            <div class="flex items-center gap-3">
+              <span class="flex-none w-12 h-12 rounded-2xl bg-amber-500/20" role="img"></span>
+              <div class="grid">
+                <h5 class="truncate text-sm font-medium">Mountain biking</h5>
+                <p class="text-xs text-foreground/50">Tarragona</p>
+              </div>
+            </div>
+            <button class="inline-flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500 hover:bg-foreground/10 focus:ring-2 focus:ring-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none" data-icon="like-outline">
+                <path
+                  d="M9.43262 2.28784C10.354 0.890298 12.1751 0.511005 13.6816 0.993896V0.994873C16.4642 1.89075 17.6067 5.27795 16.6816 8.1687L16.6807 8.17163C15.9621 10.4563 14.3364 12.2243 12.6729 13.4304C11.8445 14.031 11.0212 14.4819 10.3232 14.78C9.60129 15.0884 9.0834 15.2039 8.84863 15.2039C8.61199 15.2039 8.0956 15.0902 7.37891 14.7869C6.68537 14.4933 5.86687 14.0485 5.04199 13.4519C3.48985 12.3292 1.96075 10.7047 1.16211 8.59644L1.0127 8.16772C0.115736 5.36626 1.15453 2.10104 3.75 1.08569L4.00586 0.994873C5.48476 0.517629 7.27795 0.928 8.28223 2.31323C8.41712 2.49924 8.63454 2.6074 8.86426 2.60229C9.09389 2.59716 9.30612 2.47954 9.43262 2.28784Z"
+                  stroke="#130F26"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                </path>
+                <path d="M12.3298 3.83484C13.4539 3.95033 14.1571 4.84164 14.1152 6.09059" stroke="#130F26" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </article>
+
   <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden gap-4 py-4 mb-3 text-xs bg-background border-border text-foreground">
     <header class="w-full flex items-center justify-between gap-4 px-4">
       <div class="flex items-center gap-4">
