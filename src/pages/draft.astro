@@ -3,7 +3,7 @@ import Expo from "@/layouts/Expo.astro";
 ---
 
 <Expo>
-  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 py-4 mb-3 text-xs bg-background border-border text-foreground">
+  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 mb-3 text-xs bg-background border-border text-foreground">
     <header class="w-full flex items-center justify-between gap-4">
       <div class="flex items-center gap-4">
         <img
@@ -22,7 +22,7 @@ import Expo from "@/layouts/Expo.astro";
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </article>
 
-  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 py-4 mb-3 text-xs bg-background border-border text-foreground">
+  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 mb-3 text-xs bg-background border-border text-foreground">
     <header class="w-full flex items-center justify-between gap-4">
       <div class="flex items-center gap-4">
         <img
@@ -41,7 +41,7 @@ import Expo from "@/layouts/Expo.astro";
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </article>
 
-  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 py-4 mb-3 text-xs bg-background border-border text-foreground">
+  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 mb-3 text-xs bg-background border-border text-foreground">
     <header class="w-full flex items-center justify-between gap-4">
       <div class="flex items-center gap-4">
         <img class="flex-none w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1542534759-05f6c34a9e63?w=300&h=300&fit=crop" alt="Imagen de Unsplash por febri sym" loading="lazy" />
@@ -54,5 +54,152 @@ import Expo from "@/layouts/Expo.astro";
     </header>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </article>
+
+  <article class="border flex flex-col items-start break-inside relative rounded-xl overflow-hidden p-4 gap-4 mb-3 text-xs bg-background border-border text-foreground">
+    <header class="w-full flex items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <img
+          class="flex-none w-10 h-10 rounded-full"
+          src="https://images.unsplash.com/photo-1621921453423-87158be3514c?w=300&h=300&fit=crop"
+          alt="Imagen de Unsplash por Amirhossein Khedri"
+          loading="lazy"
+        />
+        <div class="flex-auto">
+          <div class="gap-2 text-foreground/60">
+            <span class="text-sm font-medium text-foreground">Antonio Fernandez</span> &nbsp;has shared a post with the community.
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="w-full flex group" data-row-comment>
+        <a class="relative mr-3 grid grid-rows-2" href="#">
+          <img class="rounded-full max-w-none w-10 h-10" src="https://randomuser.me/api/portraits/women/35.jpg" alt="Imagen de Avatar" loading="lazy" />
+          <div class="relative top-0 left-1/2 w-px h-full bg-border"></div>
+        </a>
+        <div class="flex-1 flex flex-col items-start gap-1 relative pr-8">
+          <button
+            class="hidden absolute right-0 top-0 group-hover:inline-flex flex-none items-center justify-center w-7 h-7 transition-all duration-300 rounded-full focus:ring-2 hover:bg-foreground/5"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+                fill="currentColor"
+              >
+              </path>
+            </svg>
+          </button>
+          <div><a class="inline-block font-bold mr-2" href="#">Jessica M.</a> <span class="text-foreground/60">1 min ago</span></div>
+          <p>Lorem ipsum dolor sit amet elit sed do eiusmod.</p>
+          <div class="flex items-center justify-start gap-1 mt-1">
+            <button class="inline-flex items-center justify-center h-7 rounded-full px-2 gap-2 bg-foreground/5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="currentColor" class="text-rose-600" data-icon="like-filled">
+                <path
+                  d="M9.43262 2.28784C10.354 0.890298 12.1751 0.511005 13.6816 0.993896V0.994873C16.4642 1.89075 17.6067 5.27795 16.6816 8.1687L16.6807 8.17163C15.9621 10.4563 14.3364 12.2243 12.6729 13.4304C11.8445 14.031 11.0212 14.4819 10.3232 14.78C9.60129 15.0884 9.0834 15.2039 8.84863 15.2039C8.61199 15.2039 8.0956 15.0902 7.37891 14.7869C6.68537 14.4933 5.86687 14.0485 5.04199 13.4519C3.48985 12.3292 1.96075 10.7047 1.16211 8.59644L1.0127 8.16772C0.115736 5.36626 1.15453 2.10104 3.75 1.08569L4.00586 0.994873C5.48476 0.517629 7.27795 0.928 8.28223 2.31323C8.41712 2.49924 8.63454 2.6074 8.86426 2.60229C9.09389 2.59716 9.30612 2.47954 9.43262 2.28784Z"
+                  class="stroke-rose-600"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                </path>
+                <path d="M12.3298 3.83484C13.4539 3.95033 14.1571 4.84164 14.1152 6.09059" class="stroke-white" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+              <span class="font-bold">5</span>
+            </button>
+            <button class="h-7 px-4 font-medium text-xs inline-flex items-center justify-center rounded-full transition-all duration-300 focus:ring-2 focus:ring-foreground hover:bg-foreground/5">
+              Repply
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex group" data-row-comment>
+        <a class="relative mr-3 grid grid-rows-2" href="#">
+          <img class="rounded-full max-w-none w-10 h-10" src="https://randomuser.me/api/portraits/women/33.jpg" alt="Imagen de Avatar" loading="lazy" />
+          <div class="relative top-0 left-1/2 w-px h-full bg-border"></div>
+        </a>
+        <div class="flex-1 flex flex-col items-start gap-1 relative pr-8">
+          <button
+            class="hidden absolute right-0 top-0 group-hover:inline-flex flex-none items-center justify-center w-7 h-7 transition-all duration-300 rounded-full focus:ring-2 hover:bg-foreground/5"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+                fill="currentColor"
+              >
+              </path>
+            </svg>
+          </button>
+          <div><a class="inline-block font-bold mr-2" href="#">Arianna</a> <span class="text-foreground/60">2 hours ago</span></div>
+          <p>Lorem ipsum dolor 🔥🔥🔥 permis alan tor...</p>
+          <div class="flex items-center justify-start gap-1 mt-1">
+            <button class="inline-flex items-center justify-center h-7 rounded-full px-2 gap-2 bg-foreground/5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="currentColor" class="text-rose-600" data-icon="like-filled">
+                <path
+                  d="M9.43262 2.28784C10.354 0.890298 12.1751 0.511005 13.6816 0.993896V0.994873C16.4642 1.89075 17.6067 5.27795 16.6816 8.1687L16.6807 8.17163C15.9621 10.4563 14.3364 12.2243 12.6729 13.4304C11.8445 14.031 11.0212 14.4819 10.3232 14.78C9.60129 15.0884 9.0834 15.2039 8.84863 15.2039C8.61199 15.2039 8.0956 15.0902 7.37891 14.7869C6.68537 14.4933 5.86687 14.0485 5.04199 13.4519C3.48985 12.3292 1.96075 10.7047 1.16211 8.59644L1.0127 8.16772C0.115736 5.36626 1.15453 2.10104 3.75 1.08569L4.00586 0.994873C5.48476 0.517629 7.27795 0.928 8.28223 2.31323C8.41712 2.49924 8.63454 2.6074 8.86426 2.60229C9.09389 2.59716 9.30612 2.47954 9.43262 2.28784Z"
+                  class="stroke-rose-600"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                </path>
+                <path d="M12.3298 3.83484C13.4539 3.95033 14.1571 4.84164 14.1152 6.09059" class="stroke-white" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+              <span class="font-bold">1</span>
+            </button>
+            <button class="h-7 px-4 font-medium text-xs inline-flex items-center justify-center rounded-full transition-all duration-300 focus:ring-2 focus:ring-foreground hover:bg-foreground/5">
+              Repply
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex group" data-row-comment>
+        <a class="relative mr-3 grid grid-rows-2" href="#">
+          <img class="rounded-full max-w-none w-10 h-10" src="https://mockmind-api.uifaces.co/content/human/129.jpg" alt="Imagen de Avatar" loading="lazy" />
+          <div class="relative top-0 left-1/2 w-px h-full bg-border"></div>
+        </a>
+        <div class="flex-1 flex flex-col items-start gap-1 relative pr-8">
+          <button
+            class="hidden absolute right-0 top-0 group-hover:inline-flex flex-none items-center justify-center w-7 h-7 transition-all duration-300 rounded-full focus:ring-2 hover:bg-foreground/5"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"
+                fill="currentColor"
+              >
+              </path>
+            </svg>
+          </button>
+          <div><a class="inline-block font-bold mr-2" href="#">Jessica M.</a> <span class="text-foreground/60">1 min ago</span></div>
+          <p>Lorem ipsum dolor sit amet elit sed do eiusmod.</p>
+          <div class="flex items-center justify-start gap-1 mt-1">
+            <button class="inline-flex items-center justify-center h-7 rounded-full px-2 gap-2 bg-foreground/5">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="currentColor" class="text-rose-600" data-icon="like-filled">
+                <path
+                  d="M9.43262 2.28784C10.354 0.890298 12.1751 0.511005 13.6816 0.993896V0.994873C16.4642 1.89075 17.6067 5.27795 16.6816 8.1687L16.6807 8.17163C15.9621 10.4563 14.3364 12.2243 12.6729 13.4304C11.8445 14.031 11.0212 14.4819 10.3232 14.78C9.60129 15.0884 9.0834 15.2039 8.84863 15.2039C8.61199 15.2039 8.0956 15.0902 7.37891 14.7869C6.68537 14.4933 5.86687 14.0485 5.04199 13.4519C3.48985 12.3292 1.96075 10.7047 1.16211 8.59644L1.0127 8.16772C0.115736 5.36626 1.15453 2.10104 3.75 1.08569L4.00586 0.994873C5.48476 0.517629 7.27795 0.928 8.28223 2.31323C8.41712 2.49924 8.63454 2.6074 8.86426 2.60229C9.09389 2.59716 9.30612 2.47954 9.43262 2.28784Z"
+                  class="stroke-rose-600"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                </path>
+                <path d="M12.3298 3.83484C13.4539 3.95033 14.1571 4.84164 14.1152 6.09059" class="stroke-white" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+              <span class="font-bold">5</span>
+            </button>
+            <button class="h-7 px-4 font-medium text-xs inline-flex items-center justify-center rounded-full transition-all duration-300 focus:ring-2 focus:ring-foreground hover:bg-foreground/5">
+              Repply
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
 </Expo>
+
 1

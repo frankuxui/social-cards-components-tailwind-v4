@@ -12,6 +12,7 @@
     "@astrojs/vercel": "^8.2.2",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.12.0",
+    "swapy": "^1.0.5",
     "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
