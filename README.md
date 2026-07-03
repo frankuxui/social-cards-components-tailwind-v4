@@ -1,10 +1,10 @@
-# Widgets y Componentes UI con Tailwind CSS 4
+# Social cards components with Tailwind CSS
 
-![Widgets y Componentes UI con Tailwind CSS 4](https://frankuxui.github.io/social-cards-components-tailwind-v4/og.jpg)
+![Social cards components with Tailwind CSS](https://frankuxui.github.io/social-cards-components-tailwind-v4/og.jpg)
 
-En muchas ocasiones queremos implementar widgets, tarjetas o componentes, pero nos falta la inspiración o simplemente ese día la creatividad no está en su mejor momento. Con estos widgets puedes encontrar ideas, referencias y soluciones de diseño minimalista que te ayuden a crear interfaces modernas, accesibles y visualmente atractivas. La idea es inspirar y fomentar la creatividad en el diseño de widgets, tarjetas y componentes reutilizables.
+In many cases, we want to implement widgets, cards, or components, but we lack inspiration or simply that day creativity is not at its best. With these widgets, you can find ideas, references, and minimalist design solutions that help you create modern, accessible, and visually appealing interfaces. The idea is to inspire and foster creativity in the design of reusable widgets, cards, and components.
 
-Explora una colección de widgets, componentes y diseños minimalistas creados con Tailwind CSS 4 y Astro. Recursos modernos y personalizables para proyectos de finanzas, redes sociales, deportes, viajes y más.
+Explore a collection of widgets, components, and minimalist designs created with Tailwind CSS 4 and Astro. Modern and customizable resources for finance, social media, sports, travel, and more projects.
 
 ## Características
 
@@ -32,32 +32,33 @@ Explora una colección de widgets, componentes y diseños minimalistas creados c
 1. Clona el repositorio:
 
 ```bash
-git https://github.com/frankuxui/widgets-components-tailwind-v4.git
+git https://github.com/frankuxui/social-cards-components-tailwind-v4.git
 ```
 
-2. Navega al directorio del proyecto:
+2. Navigate to the project directory:
 
 ```bash
-cd widgets-components-tailwind-v4
+cd social-cards-components-tailwind-v4
 ```
 
-3. Instala las dependencias:
+3. Install the dependencies:
 
 ```bash
 npm install
 ```
 
-4. Inicia el servidor de desarrollo:
+4. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-## Configuración de Tailwind CSS
+## Tailwind CSS Configuration
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-background: var(--color-white);
@@ -74,20 +75,7 @@ npm run dev
   --breakpoint-4xl: 2560px;
 
   --family-roboto: "Roboto", sans-serif;
-
-  --animate-rotate-infinite: rotate-infinite 15s linear infinite;
-
-  @keyframes rotate-infinite {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
 }
-
-/* Tema dark */
 
 .dark {
   --color-background: hsl(230 9.41% 6.14%);
@@ -95,74 +83,123 @@ npm run dev
   --color-border: var(--color-gray-800);
 }
 
-/* Material Symbols Rounded */
-
-.material-symbols-rounded {
-  font-family: "Material Symbols Rounded" !important;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  font-variation-settings:
-    "FILL" 0,
-    "wght" 400,
-    "GRAD" 0,
-    "opsz" 24;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--family-roboto);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-foreground/10 rounded;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-foreground/20 rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-foreground/30;
 }
 
-/* Relleno */
-
-.material-symbols-fill {
-  font-family: "Material Symbols Rounded" !important;
-  font-variation-settings:
-    "FILL" 1,
-    "wght" 400,
-    "GRAD" 0,
-    "opsz" 24 !important;
+.break-inside {
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
 }
 
-/* Variaciones de peso */
-
-.material-symbols-weight-100 {
-  font-variation-settings: "wght" 100;
+.expo {
+  column-count: 1;
+  column-gap: 0.75rem;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 380px;
+  padding-bottom: 2rem;
 }
-.material-symbols-weight-200 {
-  font-variation-settings: "wght" 200;
-}
-.material-symbols-weight-300 {
-  font-variation-settings: "wght" 300;
-}
-.material-symbols-weight-400 {
-  font-variation-settings: "wght" 400;
-}
-.material-symbols-weight-500 {
-  font-variation-settings: "wght" 500;
+.container {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
 }
 
-/* Tamaños */
-.material-symbols-xs {
-  font-size: 0.75rem;
+@media screen and (980px >= width > 640px) {
+  .expo {
+    column-count: 2;
+    max-width: 660px;
+  }
+  .container {
+    max-width: 660px;
+  }
 }
-.material-symbols-sm {
-  font-size: 1rem;
+
+@media screen and (1280px >= width > 980px) {
+  .expo {
+    column-count: 3;
+    max-width: 980px;
+  }
+  .container {
+    max-width: 980px;
+  }
 }
-.material-symbols-md {
-  font-size: 1.25rem;
+
+@media screen and (1600px >= width > 1280px) {
+  .expo {
+    column-count: 4;
+    max-width: 1340px;
+  }
+  .container {
+    max-width: 1340px;
+  }
 }
-.material-symbols-lg {
-  font-size: 1.5rem;
+
+@media screen and (1920px >= width > 1600px) {
+  .expo {
+    column-count: 5;
+    max-width: 1600px;
+  }
+  .container {
+    max-width: 1600px;
+  }
 }
-.material-symbols-xl {
-  font-size: 2rem;
+
+@media screen and (1920px >= width > 1600px) {
+  .expo {
+    column-count: 5;
+    max-width: 1600px;
+  }
 }
-.material-symbols-2xl {
-  font-size: 2.5rem;
+
+@media screen and (2048px >= width > 1920px) {
+  .expo {
+    column-count: 6;
+    max-width: 1920px;
+  }
+  .container {
+    max-width: 1920px;
+  }
+}
+
+@media screen and (2460px >= width > 2048px) {
+  .expo {
+    column-count: 7;
+    max-width: 2048px;
+  }
+  .container {
+    max-width: 2048px;
+  }
+}
+
+@media screen and (2560px >= width > 2460px) {
+  .expo {
+    column-count: 8;
+    max-width: 2460px;
+  }
+  .container {
+    max-width: 2460px;
+  }
 }
 ```
 
