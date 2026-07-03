@@ -1,5 +1,8 @@
 ---
 import Root from "../layouts/Root.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const urlFor = (path = "") => `${base}${path.replace(/^\//, "")}`;
 ---
 
 <Root>
@@ -20,7 +23,7 @@ import Root from "../layouts/Root.astro";
         <p class="text-foreground/70">Se estan creando los componentes de la interfaz de usuario. Visita la sección de diseño para ver las creaciones.</p>
       </div>
       <a
-        href="/cards"
+        href={urlFor("cards")}
         class="px-6 inline-flex items-center justify-center text-sm uppercase font-medium h-10 rounded-full motion-safe:transition-all motion-safe:duration-500 hover:bg-foreground/90 bg-foreground text-background"
       >
         ver componentes

@@ -1,6 +1,6 @@
 # Widgets y Componentes UI con Tailwind CSS 4
 
-![Widgets y Componentes UI con Tailwind CSS 4](https://widgets-components-tailwind-v4.vercel.app/og.jpg)
+![Widgets y Componentes UI con Tailwind CSS 4](https://frankuxui.github.io/social-cards-components-tailwind-v4/og.jpg)
 
 En muchas ocasiones queremos implementar widgets, tarjetas o componentes, pero nos falta la inspiración o simplemente ese día la creatividad no está en su mejor momento. Con estos widgets puedes encontrar ideas, referencias y soluciones de diseño minimalista que te ayuden a crear interfaces modernas, accesibles y visualmente atractivas. La idea es inspirar y fomentar la creatividad en el diseño de widgets, tarjetas y componentes reutilizables.
 
